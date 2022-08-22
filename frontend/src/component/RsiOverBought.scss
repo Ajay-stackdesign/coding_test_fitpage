@@ -1,0 +1,36 @@
+@mixin bought {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rsi__over_bought {
+  @include bought();
+  background-color: black;
+  width: 600px;
+  height: 500px;
+  position: relative;
+  left: 500px;
+  top: 100px;
+  .rsi__overbought {
+    background-color: blue;
+    width: 500px;
+    @include bought();
+    height: 120px;
+    h2 {
+      color: white;
+    }
+    h4 {
+      color: greenyellow;
+    }
+  }
+  .rsi_overbought_stock {
+    .rsi {
+      @include bought();
+      h3 {
+        color: white;
+      }
+    }
+  }
+}
